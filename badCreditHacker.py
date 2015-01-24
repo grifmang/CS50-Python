@@ -37,4 +37,10 @@ def badCredit(cc):
 
     sumForward += sumNum
 
-    print provider
+    # Final test if modulo 10 equals zero
+    if sumForward % 10 == 0:
+        print provider
+    else:
+        return "INVALID"
+
+badCredit(378282246310005)
