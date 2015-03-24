@@ -41,6 +41,8 @@ def badCredit(cc):
     if sumForward % 10 == 0:
         print provider
     else:
+        print 'INVALID'
         return "INVALID"
 
+badCredit(37246310005)
 badCredit(378282246310005)
