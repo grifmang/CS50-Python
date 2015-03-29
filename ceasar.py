@@ -8,18 +8,18 @@ def ceasar(plainText):
     lower_alpha = string.ascii_lowercase
     upper_alpha = string.ascii_uppercase
     for char in plainText:
-        if char.isalpha() == True:
-            if char.isupper() == True:
-                upper_indexndex = upper_alpha.index(char)
+        if char.isalpha():
+            if char.isupper():
+                upper_index = upper_alpha.index(char)
                 encrypted = upper_index + 13
                 if encrypted > 25:
-                    encrypted = encrypted % 26
+                    encrypted %= 26
                 result += upper_alpha[encrypted]
-            elif char.islower() == True:
+            elif char.islower():
                 lower_index = lower_alpha.index(char)
                 encrypted = lower_index + 13
                 if encrypted > 25:
-                    encrypted = encrypted % 26
+                    encrypted %= 26
                 result += lower_alpha[encrypted]
         else:
             result += char
