@@ -1,6 +1,6 @@
 import string
 
-def ceasar(plainText):
+def ceasar(plainText, key):
     # plainText = raw_input('Enter the phrase to encrypt: ')
     lower_index = 0
     upper_index = 0
@@ -11,13 +11,13 @@ def ceasar(plainText):
         if char.isalpha():
             if char.isupper():
                 upper_index = upper_alpha.index(char)
-                encrypted = upper_index + 13
+                encrypted = upper_index + key
                 if encrypted > 25:
                     encrypted %= 26
                 result += upper_alpha[encrypted]
             elif char.islower():
                 lower_index = lower_alpha.index(char)
-                encrypted = lower_index + 13
+                encrypted = lower_index + key
                 if encrypted > 25:
                     encrypted %= 26
                 result += lower_alpha[encrypted]
@@ -26,4 +26,4 @@ def ceasar(plainText):
         encrypted = 0
     print result
 
-ceasar('Be sure to drink your Ovaltine!')
+ceasar('Be sure to drink your Ovaltine!', 13)
